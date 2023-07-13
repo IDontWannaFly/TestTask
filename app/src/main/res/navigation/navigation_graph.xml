@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/profileFragment">
+
+    <action android:id="@+id/toProfileFragment"
+        app:destination="@id/profileFragment"
+        app:popUpTo="@id/profileFragment"
+        app:popUpToInclusive="true"/>
+
+    <action android:id="@+id/toEditNameFragment"
+        app:destination="@id/editNameFragment"/>
+
+    <action android:id="@+id/toEditDateFragment"
+        app:destination="@id/editBirthDateFragment"/>
+
+    <action android:id="@+id/toEditDescriptionFragment"
+        app:destination="@id/editDescriptionFragment"/>
+
+    <fragment android:id="@+id/profileFragment"
+        android:name="com.example.testtask.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+
+    <fragment android:id="@+id/editNameFragment"
+        android:name="com.example.testtask.ui.edit.EditProfileNameFragment"
+        tools:layout="@layout/fragment_edit_name"/>
+
+    <fragment android:id="@+id/editBirthDateFragment"
+        android:name="com.example.testtask.ui.edit.EditProfileBirthDateFragment"
+        tools:layout="@layout/fragment_edit_date"/>
+
+    <fragment android:id="@+id/editDescriptionFragment"
+        android:name="com.example.testtask.ui.edit.EditProfileDescriptionFragment"
+        tools:layout="@layout/fragment_edit_description"/>
+
+</navigation>
